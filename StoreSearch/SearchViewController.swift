@@ -48,6 +48,15 @@ class SearchViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowDetail" {
+      let detailViewController = segue.destinationViewController as! DetailViewController
+      let indexPath = sender as! NSIndexPath
+      let searchResult = searchResults[indexPath.row]
+      detailViewController.searchResult = searchResult
+    }
+  }
 
   @IBAction func segmentChanged(sender: UISegmentedControl) {
     performSearch()
@@ -58,7 +67,7 @@ class SearchViewController: UIViewController {
     switch category {
       case 1: entityName = "musicTrack"
       case 2: entityName = "software"
-      case 3: entityName = "ebook"
+      case 3: entityName = "audiobook"
       default: entityName = ""
     }
     
@@ -344,6 +353,7 @@ extension SearchViewController: UITableViewDelegate {
   }
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    performSegueWithIdentifier("ShowDetail", sender: indexPath)
   }
 }
 
