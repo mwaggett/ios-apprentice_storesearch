@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoadingCell" id="bit-ey-3dP">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bit-ey-3dP" id="ksF-MU-4zu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0N-6I-TFb">
+                        <rect key="frame" x="96" y="10" width="128" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egz-ml-fQe">
+                                <rect key="frame" x="20" y="20" width="75" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Gg-4aS">
+                                <rect key="frame" x="95" y="21" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gg2-Gg-4aS" secondAttribute="bottom" constant="20" id="82p-m1-5Pr"/>
+                            <constraint firstAttribute="trailing" secondItem="gg2-Gg-4aS" secondAttribute="trailing" constant="20" id="Caz-GK-1Ab"/>
+                            <constraint firstItem="gg2-Gg-4aS" firstAttribute="top" secondItem="U0N-6I-TFb" secondAttribute="top" constant="20" id="N6G-pq-amE"/>
+                            <constraint firstItem="egz-ml-fQe" firstAttribute="leading" secondItem="U0N-6I-TFb" secondAttribute="leading" constant="20" id="W5A-Rb-naX"/>
+                            <constraint firstItem="egz-ml-fQe" firstAttribute="top" secondItem="U0N-6I-TFb" secondAttribute="top" constant="20" id="ZeJ-g5-b7Y"/>
+                            <constraint firstAttribute="bottom" secondItem="egz-ml-fQe" secondAttribute="bottom" constant="20" id="cGo-F8-JPX"/>
+                            <constraint firstItem="gg2-Gg-4aS" firstAttribute="leading" secondItem="egz-ml-fQe" secondAttribute="trailing" id="ruL-9a-8Ln"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="U0N-6I-TFb" firstAttribute="centerX" secondItem="ksF-MU-4zu" secondAttribute="centerX" id="W1D-6q-2ml"/>
+                    <constraint firstItem="U0N-6I-TFb" firstAttribute="centerY" secondItem="ksF-MU-4zu" secondAttribute="centerY" id="o3t-Hu-J4j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="378" y="425"/>
+        </tableViewCell>
+    </objects>
+</document>

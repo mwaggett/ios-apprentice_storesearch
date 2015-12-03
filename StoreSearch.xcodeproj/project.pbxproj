@@ -16,6 +16,7 @@
 		BA84DB7D1C0FBF58004A15EF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */; };
 		BA84DB7F1C0FC292004A15EF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */; };
 		BA84DB811C0FC4F6004A15EF /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */; };
+		BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
 				BA84DB711C0FA7AC004A15EF /* LaunchScreen.storyboard */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
+				BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				BA84DB731C0FA7AC004A15EF /* LaunchScreen.storyboard in Resources */,
 				BA84DB701C0FA7AC004A15EF /* Assets.xcassets in Resources */,
+				BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */,
 				BA84DB7D1C0FBF58004A15EF /* SearchResultCell.xib in Resources */,
 				BA84DB811C0FC4F6004A15EF /* NothingFoundCell.xib in Resources */,
 				BA84DB6E1C0FA7AC004A15EF /* Main.storyboard in Resources */,
@@ -300,6 +304,7 @@
 				BA84DB791C0FA7AC004A15EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
