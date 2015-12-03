@@ -16,6 +16,7 @@
 		BA84DB7F1C0FC292004A15EF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */; };
 		BA84DB811C0FC4F6004A15EF /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */; };
 		BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */; };
+		BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
 				BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */,
+				BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				BA84DB7B1C0FBA84004A15EF /* SearchResult.swift in Sources */,
 				BA84DB7F1C0FC292004A15EF /* SearchResultCell.swift in Sources */,
 				BA84DB691C0FA7AC004A15EF /* AppDelegate.swift in Sources */,
+				BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

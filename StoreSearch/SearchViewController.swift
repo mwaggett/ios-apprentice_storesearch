@@ -235,20 +235,6 @@ class SearchViewController: UIViewController {
     return searchResult
   }
   
-  func kindForDisplay(kind: String) -> String {
-    switch kind {
-      case "album": return "Album"
-      case "audiobook": return "Audio Book"
-      case "book": return "Book"
-      case "ebook": return "E-Book"
-      case "feature-movie": return "Movie" case "music-video": return "Music Video" case "podcast": return "Podcast"
-      case "software": return "App"
-      case "song": return "Song"
-      case "tv-episode": return "TV Episode"
-      default: return kind
-    }
-  }
-  
   func showNetworkError() {
     let alert = UIAlertController(
       title: "Whoops...",
@@ -340,12 +326,7 @@ extension SearchViewController: UITableViewDataSource {
     } else {
       let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as! SearchResultCell
       let searchResult = searchResults[indexPath.row]
-      cell.nameLabel.text = searchResult.name
-      if searchResult.artistName.isEmpty {
-        cell.artistNameLabel.text = "Unknown"
-      } else {
-        cell.artistNameLabel.text = String(format: "%@ (%@)", searchResult.artistName, kindForDisplay(searchResult.kind))
-      }
+      cell.configureForSearchResult(searchResult)
       return cell
     }
   }
