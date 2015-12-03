@@ -65,13 +65,13 @@
 				BA84DB741C0FA7AC004A15EF /* Info.plist */,
 				BA84DB681C0FA7AC004A15EF /* AppDelegate.swift */,
 				BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */,
+				BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */,
 				BA84DB6A1C0FA7AC004A15EF /* SearchViewController.swift */,
 				BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */,
+				BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */,
+				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
 				BA84DB711C0FA7AC004A15EF /* LaunchScreen.storyboard */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
-				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
-				BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */,
-				BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
