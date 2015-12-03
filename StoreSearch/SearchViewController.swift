@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
   var searchResults = [SearchResult]()
   var hasSearched = false
   var isLoading = false
+  var dataTask: NSURLSessionDataTask?
   
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
@@ -257,18 +258,17 @@ extension SearchViewController: UISearchBarDelegate {
     if let searchText = searchBar.text {
       if !searchText.isEmpty {
         searchBar.resignFirstResponder()
-  
+        dataTask?.cancel()
         isLoading = true
         tableView.reloadData()
-        
         hasSearched = true
         searchResults = [SearchResult]()
   
         if let url = urlWithSearchText(searchText) {
           let session = NSURLSession.sharedSession()
-          let dataTask = session.dataTaskWithURL(url, completionHandler: { data, response, error in
-            if let error = error {
-              print("Failure! \(error)")
+          dataTask = session.dataTaskWithURL(url, completionHandler: { data, response, error in
+            if let error = error where error.code == -999 {
+              return
             } else if let httpResponse = response as? NSHTTPURLResponse where httpResponse.statusCode == 200 {
               if let data = data, dictionary = self.parseJSON(data) {
                 self.searchResults = self.parseDictionary(dictionary)
@@ -290,7 +290,7 @@ extension SearchViewController: UISearchBarDelegate {
               self.showNetworkError()
             }
           })
-          dataTask.resume()
+          dataTask?.resume()
         }
       }
     }
