@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
   var dataTask: NSURLSessionDataTask?
   
   @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var tableView: UITableView!
   
   struct TableViewCellIdentifiers {
@@ -29,7 +30,7 @@ class SearchViewController: UIViewController {
     
     searchBar.becomeFirstResponder()
     
-    tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+    tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
     
     var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
     tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
@@ -48,9 +49,21 @@ class SearchViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  func urlWithSearchText(searchText: String) -> NSURL? {
+  @IBAction func segmentChanged(sender: UISegmentedControl) {
+    performSearch()
+  }
+  
+  func urlWithSearchText(searchText: String, category: Int) -> NSURL? {
+    let entityName: String
+    switch category {
+      case 1: entityName = "musicTrack"
+      case 2: entityName = "software"
+      case 3: entityName = "ebook"
+      default: entityName = ""
+    }
+    
     let escapedSearchText = searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-    let urlString = String(format: "https://itunes.apple.com/search?term=%@", escapedSearchText)
+    let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200&entity=%@", escapedSearchText, entityName)
     let url = NSURL(string: urlString)
     return url
   }
@@ -255,6 +268,10 @@ extension SearchViewController: UISearchBarDelegate {
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    performSearch()
+  }
+  
+  func performSearch() {
     if let searchText = searchBar.text {
       if !searchText.isEmpty {
         searchBar.resignFirstResponder()
@@ -264,7 +281,7 @@ extension SearchViewController: UISearchBarDelegate {
         hasSearched = true
         searchResults = [SearchResult]()
   
-        if let url = urlWithSearchText(searchText) {
+        if let url = urlWithSearchText(searchText, category: segmentedControl.selectedSegmentIndex) {
           let session = NSURLSession.sharedSession()
           dataTask = session.dataTaskWithURL(url, completionHandler: { data, response, error in
             if let error = error where error.code == -999 {
