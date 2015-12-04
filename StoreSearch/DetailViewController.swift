@@ -34,6 +34,7 @@ class DetailViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+      view.backgroundColor = UIColor.clearColor()
     view.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
     popupView.layer.cornerRadius = 10
       

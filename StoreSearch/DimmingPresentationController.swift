@@ -10,6 +10,15 @@ import UIKit
 
 class DimmingPresentationController: UIPresentationController {
   
+  lazy var dimmingView = GradientView(frame: CGRect.zero)
+  
+  override func presentationTransitionWillBegin() {
+    if let containerView = containerView {
+      dimmingView.frame = containerView.bounds
+      containerView.insertSubview(dimmingView, atIndex: 0)
+    }
+  }
+  
   override func shouldRemovePresentersView() -> Bool {
     return false
   }
