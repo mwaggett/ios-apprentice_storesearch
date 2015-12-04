@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  var landscapeViewController: LandscapeViewController?
+  
   var searchResults = [SearchResult]()
   var hasSearched = false
   var isLoading = false
@@ -57,9 +59,34 @@ class SearchViewController: UIViewController {
       detailViewController.searchResult = searchResult
     }
   }
+  
+  override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+    switch newCollection.verticalSizeClass {
+      case .Compact:
+        showLandscapeViewWithCoordinator(coordinator)
+      case .Regular, .Unspecified:
+        hideLandscapeViewWithCoordinator(coordinator)
+    }
+  }
 
   @IBAction func segmentChanged(sender: UISegmentedControl) {
     performSearch()
+  }
+  
+  func showLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+    precondition(landscapeViewController == nil)
+    landscapeViewController = storyboard!.instantiateViewControllerWithIdentifier("LandscapeViewController") as? LandscapeViewController
+    if let controller = landscapeViewController {
+      controller.view.frame = view.bounds
+      view.addSubview(controller.view)
+      addChildViewController(controller)
+      controller.didMoveToParentViewController(self)
+    }
+  }
+  
+  func hideLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+    
   }
   
   func urlWithSearchText(searchText: String, category: Int) -> NSURL? {
