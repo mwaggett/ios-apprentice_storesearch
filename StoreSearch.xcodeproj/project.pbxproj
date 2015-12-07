@@ -12,10 +12,10 @@
 		BA84DB6E1C0FA7AC004A15EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */; };
 		BA84DB701C0FA7AC004A15EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */; };
 		BA84DB7B1C0FBA84004A15EF /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */; };
-		BA84DB7D1C0FBF58004A15EF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */; };
 		BA84DB7F1C0FC292004A15EF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */; };
-		BA84DB811C0FC4F6004A15EF /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */; };
-		BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */; };
+		BA93EEB81C1628E30065FF47 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */; };
+		BA93EEBC1C162C310065FF47 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEBE1C162C310065FF47 /* LoadingCell.xib */; };
+		BA93EEC31C162F000065FF47 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEC51C162F000065FF47 /* SearchResultCell.xib */; };
 		BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */; };
 		BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */; };
 		BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB7A1C160D4500305B19 /* Search.swift */; };
@@ -35,10 +35,13 @@
 		BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA84DB741C0FA7AC004A15EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
-		BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		BA93EEB91C1628E30065FF47 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		BA93EEBB1C1629290065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		BA93EEBD1C162C310065FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
+		BA93EEC01C162C530065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
+		BA93EEC21C162DB50065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		BA93EEC41C162F000065FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
 		BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		BA9ECB7A1C160D4500305B19 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -95,9 +98,9 @@
 				BAA6105F1C11195E004AB545 /* SlideOutAnimationController.swift */,
 				BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */,
 				BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */,
-				BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */,
-				BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */,
-				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
+				BA93EEBE1C162C310065FF47 /* LoadingCell.xib */,
+				BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */,
+				BA93EEC51C162F000065FF47 /* SearchResultCell.xib */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
 			);
 			path = StoreSearch;
@@ -145,6 +148,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = BA84DB5C1C0FA7AC004A15EF;
 			productRefGroup = BA84DB661C0FA7AC004A15EF /* Products */;
@@ -162,9 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA84DB701C0FA7AC004A15EF /* Assets.xcassets in Resources */,
-				BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */,
-				BA84DB7D1C0FBF58004A15EF /* SearchResultCell.xib in Resources */,
-				BA84DB811C0FC4F6004A15EF /* NothingFoundCell.xib in Resources */,
+				BA93EEBC1C162C310065FF47 /* LoadingCell.xib in Resources */,
+				BA93EEC31C162F000065FF47 /* SearchResultCell.xib in Resources */,
+				BA93EEB81C1628E30065FF47 /* NothingFoundCell.xib in Resources */,
 				BA84DB6E1C0FA7AC004A15EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,8 +203,35 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA84DB6D1C0FA7AC004A15EF /* Base */,
+				BA93EEC21C162DB50065FF47 /* nl */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA93EEB91C1628E30065FF47 /* en */,
+				BA93EEBB1C1629290065FF47 /* nl */,
+			);
+			name = NothingFoundCell.xib;
+			sourceTree = "<group>";
+		};
+		BA93EEBE1C162C310065FF47 /* LoadingCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA93EEBD1C162C310065FF47 /* Base */,
+				BA93EEC01C162C530065FF47 /* nl */,
+			);
+			name = LoadingCell.xib;
+			sourceTree = "<group>";
+		};
+		BA93EEC51C162F000065FF47 /* SearchResultCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA93EEC41C162F000065FF47 /* Base */,
+			);
+			name = SearchResultCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
