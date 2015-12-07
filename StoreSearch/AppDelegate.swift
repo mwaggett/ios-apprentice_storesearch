@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     customizeAppearance()
+    splitViewController.delegate = self
     searchViewController.splitViewDetail = detailViewController
     detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
     return true
@@ -64,5 +65,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window!.tintColor = UIColor(red: 10/255, green: 80/255, blue: 80/255, alpha: 1)
   }
 
+}
+
+extension AppDelegate: UISplitViewControllerDelegate {
+  
+  func splitViewController(svc: UISplitViewController, willChangeToDisplayMode displayMode: UISplitViewControllerDisplayMode) {
+    print(__FUNCTION__)
+    if displayMode == .PrimaryOverlay {
+      svc.dismissViewControllerAnimated(true, completion: nil)
+    }
+  }
 }
 

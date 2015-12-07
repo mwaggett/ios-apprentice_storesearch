@@ -18,6 +18,7 @@
 		BA93EEC31C162F000065FF47 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEC51C162F000065FF47 /* SearchResultCell.xib */; };
 		BA93EEC81C1631710065FF47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEC61C1631710065FF47 /* Localizable.strings */; };
 		BA93EECC1C1636950065FF47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA93EECE1C1636950065FF47 /* InfoPlist.strings */; };
+		BA93EED11C164F330065FF47 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93EED01C164F330065FF47 /* MenuViewController.swift */; };
 		BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */; };
 		BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */; };
 		BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB7A1C160D4500305B19 /* Search.swift */; };
@@ -48,6 +49,7 @@
 		BA93EEC91C1631E80065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA93EECD1C1636950065FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA93EECF1C1636980065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA93EED01C164F330065FF47 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		BA9ECB7A1C160D4500305B19 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */,
 				BAA6105B1C1110A9004AB545 /* GradientView.swift */,
 				BAA610611C111B6B004AB545 /* LandscapeViewController.swift */,
+				BA93EED01C164F330065FF47 /* MenuViewController.swift */,
 				BA9ECB7A1C160D4500305B19 /* Search.swift */,
 				BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */,
 				BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */,
@@ -104,12 +107,12 @@
 				BAA6105F1C11195E004AB545 /* SlideOutAnimationController.swift */,
 				BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */,
 				BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */,
+				BA93EECE1C1636950065FF47 /* InfoPlist.strings */,
 				BA93EEBE1C162C310065FF47 /* LoadingCell.xib */,
 				BA93EEC61C1631710065FF47 /* Localizable.strings */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
 				BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */,
 				BA93EEC51C162F000065FF47 /* SearchResultCell.xib */,
-				BA93EECE1C1636950065FF47 /* InfoPlist.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */,
 				BA84DB6B1C0FA7AC004A15EF /* SearchViewController.swift in Sources */,
 				BAA6105A1C10F1C4004AB545 /* DimmingPresentationController.swift in Sources */,
+				BA93EED11C164F330065FF47 /* MenuViewController.swift in Sources */,
 				BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */,
 				BA84DB7B1C0FBA84004A15EF /* SearchResult.swift in Sources */,
 				BA84DB7F1C0FC292004A15EF /* SearchResultCell.swift in Sources */,
