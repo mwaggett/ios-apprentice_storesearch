@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  weak var splitViewDetail: DetailViewController?
   var landscapeViewController: LandscapeViewController?
   
   var search = Search()
@@ -27,7 +28,11 @@ class SearchViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    searchBar.becomeFirstResponder()
+    title = NSLocalizedString("Search", comment: "Split-view master button")
+    
+    if UIDevice.currentDevice().userInterfaceIdiom != .Pad {
+      searchBar.becomeFirstResponder()
+    }
     
     tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
     
@@ -55,6 +60,7 @@ class SearchViewController: UIViewController {
         let indexPath = sender as! NSIndexPath
         let searchResult = list[indexPath.row]
         detailViewController.searchResult = searchResult
+        detailViewController.isPopUp = true
       }
     }
   }
@@ -108,6 +114,14 @@ class SearchViewController: UIViewController {
         self.landscapeViewController = nil
       })
     }
+  }
+  
+  func hideMasterPane() {
+    UIView.animateWithDuration(0.25, animations: {
+      self.splitViewController!.preferredDisplayMode = .PrimaryHidden
+    }, completion: { _ in
+      self.splitViewController!.preferredDisplayMode = .Automatic
+    })
   }
   
   func showNetworkError() {
@@ -194,9 +208,21 @@ extension SearchViewController: UITableViewDelegate {
         return indexPath
     }
   }
+  
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    performSegueWithIdentifier("ShowDetail", sender: indexPath)
+    searchBar.resignFirstResponder()
+    if view.window!.rootViewController!.traitCollection.horizontalSizeClass == .Compact {
+      tableView.deselectRowAtIndexPath(indexPath, animated: true)
+      performSegueWithIdentifier("ShowDetail", sender: indexPath)
+    } else {
+      if case .Results(let list) = search.state {
+        if splitViewController!.displayMode != .AllVisible {
+          hideMasterPane()
+        }
+        splitViewDetail?.searchResult = list[indexPath.row]
+      }
+    }
   }
+  
 }
 

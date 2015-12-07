@@ -10,7 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
-  var searchResult: SearchResult?
+  var isPopUp = false
+  var searchResult: SearchResult! {
+    didSet {
+      if isViewLoaded() {
+        updateUI(searchResult)
+      }
+    }
+  }
   var downloadTask: NSURLSessionDownloadTask?
   
   enum AnimationStyle {
@@ -40,18 +47,27 @@ class DetailViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-      view.backgroundColor = UIColor.clearColor()
     view.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
-    popupView.layer.cornerRadius = 10
-      
+    popupView.layer.cornerRadius = 10      
     if let result = searchResult {
       updateUI(result)
     }
-      
-    let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("close"))
-    gestureRecognizer.cancelsTouchesInView = false
-    gestureRecognizer.delegate = self
-    view.addGestureRecognizer(gestureRecognizer)
+    if isPopUp {
+      let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("close"))
+      gestureRecognizer.cancelsTouchesInView = false
+      gestureRecognizer.delegate = self
+      view.addGestureRecognizer(gestureRecognizer)
+      view.backgroundColor = UIColor.clearColor()
+    } else {
+      if let backgroundImage = UIImage(named: "LandscapeBackground") {
+        view.backgroundColor = UIColor(patternImage: backgroundImage)
+      }
+      popupView.hidden = true
+      if let displayName = NSBundle.mainBundle().localizedInfoDictionary?["CFBundleDisplayName"] as? String {
+        title = displayName
+      }
+    }
+
   }
 
   override func didReceiveMemoryWarning() {
@@ -98,6 +114,7 @@ class DetailViewController: UIViewController {
     if let url = NSURL(string: searchResult.artworkURL100) {
       downloadTask = artworkImageView.loadImageWithURL(url)
     }
+    popupView.hidden = false
   }
 
 }

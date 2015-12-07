@@ -13,9 +13,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
+  var splitViewController: UISplitViewController {
+    return window!.rootViewController as! UISplitViewController
+  }
+  
+  var searchViewController: SearchViewController {
+    return splitViewController.viewControllers.first as! SearchViewController
+  }
+  
+  var detailNavigationController: UINavigationController {
+    return splitViewController.viewControllers.last as! UINavigationController
+  }
+  
+  var detailViewController: DetailViewController {
+    return detailNavigationController.topViewController as! DetailViewController
+  }
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     customizeAppearance()
+    searchViewController.splitViewDetail = detailViewController
+    detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
     return true
   }
 
