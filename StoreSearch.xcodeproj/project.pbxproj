@@ -83,6 +83,7 @@
 				BAA6105D1C11144D004AB545 /* BounceAnimationController.swift */,
 				BAA610571C10EF32004AB545 /* DetailViewController.swift */,
 				BAA610591C10F1C4004AB545 /* DimmingPresentationController.swift */,
+				BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */,
 				BAA6105B1C1110A9004AB545 /* GradientView.swift */,
 				BAA610611C111B6B004AB545 /* LandscapeViewController.swift */,
 				BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */,
@@ -95,7 +96,6 @@
 				BA84DB801C0FC4F6004A15EF /* NothingFoundCell.xib */,
 				BA84DB7C1C0FBF58004A15EF /* SearchResultCell.xib */,
 				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
-				BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
