@@ -18,6 +18,7 @@
 		BA9A0AF81C10C51E00B65CA3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */; };
 		BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */; };
 		BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */; };
+		BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB7A1C160D4500305B19 /* Search.swift */; };
 		BAA610581C10EF32004AB545 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA610571C10EF32004AB545 /* DetailViewController.swift */; };
 		BAA6105A1C10F1C4004AB545 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA610591C10F1C4004AB545 /* DimmingPresentationController.swift */; };
 		BAA6105C1C1110A9004AB545 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6105B1C1110A9004AB545 /* GradientView.swift */; };
@@ -40,6 +41,7 @@
 		BA9A0AF71C10C51E00B65CA3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
+		BA9ECB7A1C160D4500305B19 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		BAA610571C10EF32004AB545 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BAA610591C10F1C4004AB545 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 		BAA6105B1C1110A9004AB545 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */,
 				BAA6105B1C1110A9004AB545 /* GradientView.swift */,
 				BAA610611C111B6B004AB545 /* LandscapeViewController.swift */,
+				BA9ECB7A1C160D4500305B19 /* Search.swift */,
 				BA84DB7A1C0FBA84004A15EF /* SearchResult.swift */,
 				BA84DB7E1C0FC292004A15EF /* SearchResultCell.swift */,
 				BA84DB6A1C0FA7AC004A15EF /* SearchViewController.swift */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */,
 				BA84DB6B1C0FA7AC004A15EF /* SearchViewController.swift in Sources */,
 				BAA6105A1C10F1C4004AB545 /* DimmingPresentationController.swift in Sources */,
 				BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */,
