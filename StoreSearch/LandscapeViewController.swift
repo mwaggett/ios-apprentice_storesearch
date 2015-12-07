@@ -40,11 +40,6 @@ class LandscapeViewController: UIViewController {
       scrollView.backgroundColor = UIColor(patternImage: backgroundImage)
     }
   }
-
-  override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-  }
   
   override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
@@ -55,18 +50,66 @@ class LandscapeViewController: UIViewController {
     if firstTime {
       firstTime = false
       switch search.state {
-        case .NotSearchedYet: break
-        case .Loading: break
-        case .NoResults: break
-        case .Results(let list): tileButtons(list)
+        case .NotSearchedYet:
+          break
+        case .Loading:
+          showSpinner()
+        case .NoResults:
+          showNothingFoundLabel()
+        case .Results(let list):
+          tileButtons(list)
       }
     }
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
   }
   
   @IBAction func pageChanged(sender: UIPageControl) {
     UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
       self.scrollView.contentOffset = CGPoint(x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage), y: 0)
     }, completion: nil)
+  }
+  
+  func searchResultsReceived() {
+    hideSpinner()
+    switch search.state {
+      case .NotSearchedYet, .Loading:
+        break
+      case .NoResults:
+        showNothingFoundLabel()
+      case .Results(let list):
+        tileButtons(list)
+    }
+  }
+  
+  private func showSpinner() {
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    spinner.center = CGPoint(x: CGRectGetMidX(scrollView.bounds) + 0.5, y: CGRectGetMidY(scrollView.bounds) + 0.5)
+    spinner.tag = 1000
+    view.addSubview(spinner)
+    spinner.startAnimating()
+  }
+  
+  private func hideSpinner() {
+    view.viewWithTag(1000)?.removeFromSuperview()
+  }
+  
+  private func showNothingFoundLabel() {
+    let label = UILabel(frame: CGRect.zero)
+    label.text = "Nothing Found"
+    label.textColor = UIColor.whiteColor()
+    label.backgroundColor = UIColor.clearColor()
+    label.sizeToFit()
+    
+    var rect = label.frame
+    rect.size.width = ceil(rect.size.width/2) * 2
+    rect.size.height = ceil(rect.size.height/2) * 2
+    label.frame = rect
+    label.center = CGPoint(x: CGRectGetMidX(scrollView.bounds), y: CGRectGetMidY(scrollView.bounds))
+    view.addSubview(label)
   }
   
   private func tileButtons(searchResults: [SearchResult]) {

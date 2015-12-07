@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 typealias SearchComplete = (Bool) -> Void
 
@@ -39,9 +40,9 @@ class Search {
   private var dataTask: NSURLSessionDataTask? = nil
   
   func performSearchForText(text: String, category: Category, completion: SearchComplete) {
-    print("Searching...")
     if !text.isEmpty {
       dataTask?.cancel()
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = true
       state = .Loading
       
       if let url = urlWithSearchText(text, category: category) {
@@ -63,6 +64,7 @@ class Search {
             success = true
           }         
           dispatch_async(dispatch_get_main_queue()) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             completion(success)
           }
         })

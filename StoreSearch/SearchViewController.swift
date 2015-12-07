@@ -135,6 +135,7 @@ extension SearchViewController: UISearchBarDelegate {
         if !success {
           self.showNetworkError()
         }
+        self.landscapeViewController?.searchResultsReceived()
         self.tableView.reloadData()
       })
       tableView.reloadData()
@@ -148,10 +149,14 @@ extension SearchViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch search.state {
-      case .NotSearchedYet: return 0
-      case .Loading: return 1
-      case .NoResults: return 1
-      case .Results(let list): return list.count
+      case .NotSearchedYet:
+        return 0
+      case .Loading:
+        return 1
+      case .NoResults:
+        return 1
+      case .Results(let list):
+        return list.count
     }
   }
   
@@ -180,8 +185,10 @@ extension SearchViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     switch search.state {
-      case .NotSearchedYet, .Loading, .NoResults: return nil
-      case .Results: return indexPath
+      case .NotSearchedYet, .Loading, .NoResults:
+        return nil
+      case .Results:
+        return indexPath
     }
   }
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
