@@ -79,14 +79,32 @@ class SearchViewController: UIViewController {
     landscapeViewController = storyboard!.instantiateViewControllerWithIdentifier("LandscapeViewController") as? LandscapeViewController
     if let controller = landscapeViewController {
       controller.view.frame = view.bounds
+      controller.view.alpha = 0
       view.addSubview(controller.view)
       addChildViewController(controller)
-      controller.didMoveToParentViewController(self)
+      coordinator.animateAlongsideTransition({ _ in
+        controller.view.alpha = 1
+        self.searchBar.resignFirstResponder()
+        if self.presentedViewController != nil {
+          self.dismissViewControllerAnimated(true, completion: nil)
+        }
+      }, completion: { _ in
+          controller.didMoveToParentViewController(self)
+      })
     }
   }
   
   func hideLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
-    
+    if let controller = landscapeViewController {
+      controller.willMoveToParentViewController(nil)
+      coordinator.animateAlongsideTransition({ _ in
+        controller.view.alpha = 0
+      }, completion: { _ in
+        controller.view.removeFromSuperview()
+        controller.removeFromParentViewController()
+        self.landscapeViewController = nil
+      })
+    }
   }
   
   func urlWithSearchText(searchText: String, category: Int) -> NSURL? {
