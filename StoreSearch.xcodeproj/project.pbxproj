@@ -16,6 +16,8 @@
 		BA93EEB81C1628E30065FF47 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */; };
 		BA93EEBC1C162C310065FF47 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEBE1C162C310065FF47 /* LoadingCell.xib */; };
 		BA93EEC31C162F000065FF47 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEC51C162F000065FF47 /* SearchResultCell.xib */; };
+		BA93EEC81C1631710065FF47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA93EEC61C1631710065FF47 /* Localizable.strings */; };
+		BA93EECC1C1636950065FF47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA93EECE1C1636950065FF47 /* InfoPlist.strings */; };
 		BA9A0AFA1C10E7D200B65CA3 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */; };
 		BA9ECB791C15FADA00305B19 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */; };
 		BA9ECB7B1C160D4500305B19 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ECB7A1C160D4500305B19 /* Search.swift */; };
@@ -42,6 +44,10 @@
 		BA93EEC01C162C530065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
 		BA93EEC21C162DB50065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		BA93EEC41C162F000065FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
+		BA93EEC71C1631710065FF47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA93EEC91C1631E80065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA93EECD1C1636950065FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA93EECF1C1636980065FF47 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		BA9ECB781C15FADA00305B19 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		BA9ECB7A1C160D4500305B19 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -99,9 +105,11 @@
 				BA9A0AF91C10E7D200B65CA3 /* UIImageView+DownloadImage.swift */,
 				BA84DB6F1C0FA7AC004A15EF /* Assets.xcassets */,
 				BA93EEBE1C162C310065FF47 /* LoadingCell.xib */,
+				BA93EEC61C1631710065FF47 /* Localizable.strings */,
+				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
 				BA93EEBA1C1628E30065FF47 /* NothingFoundCell.xib */,
 				BA93EEC51C162F000065FF47 /* SearchResultCell.xib */,
-				BA84DB6C1C0FA7AC004A15EF /* Main.storyboard */,
+				BA93EECE1C1636950065FF47 /* InfoPlist.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA84DB701C0FA7AC004A15EF /* Assets.xcassets in Resources */,
+				BA93EECC1C1636950065FF47 /* InfoPlist.strings in Resources */,
+				BA93EEC81C1631710065FF47 /* Localizable.strings in Resources */,
 				BA93EEBC1C162C310065FF47 /* LoadingCell.xib in Resources */,
 				BA93EEC31C162F000065FF47 /* SearchResultCell.xib in Resources */,
 				BA93EEB81C1628E30065FF47 /* NothingFoundCell.xib in Resources */,
@@ -232,6 +242,24 @@
 				BA93EEC41C162F000065FF47 /* Base */,
 			);
 			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		BA93EEC61C1631710065FF47 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA93EEC71C1631710065FF47 /* en */,
+				BA93EEC91C1631E80065FF47 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BA93EECE1C1636950065FF47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA93EECD1C1636950065FF47 /* Base */,
+				BA93EECF1C1636980065FF47 /* nl */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
