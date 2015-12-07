@@ -62,6 +62,16 @@ class LandscapeViewController: UIViewController {
     }
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowDetail" {
+      if case .Results(let list) = search.state {
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        let searchResult = list[sender!.tag - 2000]
+        detailViewController.searchResult = searchResult
+      }
+    }
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -71,6 +81,10 @@ class LandscapeViewController: UIViewController {
     UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
       self.scrollView.contentOffset = CGPoint(x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage), y: 0)
     }, completion: nil)
+  }
+  
+  func buttonPressed(sender: UIButton) {
+    performSegueWithIdentifier("ShowDetail", sender: sender)
   }
   
   func searchResultsReceived() {
@@ -134,9 +148,9 @@ class LandscapeViewController: UIViewController {
       marginX = 1
       marginY = 29
     case 736:
-        columnsPerPage = 8
-        rowsPerPage = 4
-        itemWidth = 92
+      columnsPerPage = 8
+      rowsPerPage = 4
+      itemWidth = 92
     default:
       break
     }
@@ -149,11 +163,13 @@ class LandscapeViewController: UIViewController {
     var row = 0
     var column = 0
     var x = marginX
-    for searchResult in searchResults {
+    for (index, searchResult) in searchResults.enumerate() {
       let button = UIButton(type: .Custom)
       downloadImageForSearchResult(searchResult, andPlaceOnButton: button)
       button.setBackgroundImage(UIImage(named: "LandscapeButton"), forState: .Normal)
       button.frame = CGRect(x: x + paddingHorz, y: marginY + CGFloat(row)*itemHeight + paddingVert, width: buttonWidth, height: buttonHeight)
+      button.tag = 2000 + index
+      button.addTarget(self, action: Selector("buttonPressed:"), forControlEvents: .TouchUpInside)
       scrollView.addSubview(button)
       ++row
       

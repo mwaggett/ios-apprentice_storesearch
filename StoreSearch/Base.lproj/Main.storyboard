@@ -117,6 +117,7 @@
                     <connections>
                         <outlet property="pageControl" destination="DvU-J9-Kir" id="Tfr-ro-x03"/>
                         <outlet property="scrollView" destination="8s1-fJ-DWA" id="MMD-KG-wZ9"/>
+                        <segue destination="ZZW-dc-U6O" kind="presentation" identifier="ShowDetail" id="1xa-Mb-AvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2W5-ho-OWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,4 +271,7 @@
         <image name="CloseButton" width="15" height="15"/>
         <image name="PriceButton" width="11" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1xa-Mb-AvP"/>
+    </inferredMetricsTieBreakers>
 </document>
