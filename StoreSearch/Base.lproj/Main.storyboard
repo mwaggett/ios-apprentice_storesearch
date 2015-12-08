@@ -180,6 +180,12 @@
                                             <constraint firstAttribute="width" constant="15" id="pk3-4k-6Sh"/>
                                         </constraints>
                                         <state key="normal" image="CloseButton"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="O7n-di-Oz0"/>
+                                                <exclude reference="pk3-4k-6Sh"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="O7n-di-Oz0"/>
@@ -330,6 +336,15 @@
                                     </constraint>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ABZ-lN-UXs" secondAttribute="trailing" constant="10" id="qhp-Kh-URY"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="nNv-h2-Dgp"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="KSM-bI-rGF"/>
+                                        <exclude reference="lR1-i1-6jb"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="subviews">
                                         <exclude reference="nNv-h2-Dgp"/>
@@ -344,7 +359,9 @@
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zm9-hx-STT" firstAttribute="centerY" secondItem="LkT-9y-5KG" secondAttribute="centerY" id="2w1-M2-rHm"/>
+                            <constraint firstItem="zm9-hx-STT" firstAttribute="centerY" secondItem="LkT-9y-5KG" secondAttribute="centerY" id="2w1-M2-rHm">
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="zm9-hx-STT" firstAttribute="centerX" secondItem="LkT-9y-5KG" secondAttribute="centerX" id="HWG-3N-DV7"/>
                         </constraints>
                     </view>
